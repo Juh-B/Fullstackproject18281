@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px) {
+    h1 {    
+        color: red;
+        text-align: center;
+        font-size: 100%;
+    }
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;       
+        line-height: 60px;
+        background-color: #eee;
+        font-size: 100%; 
+    }
+}

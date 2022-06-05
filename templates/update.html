@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block head %} home {% endblock %} 
+{% block content %} 
+<div class="container">
+    <h2>Update Task by {{ author }}</h2>            
+    <table class="table table-bordered table-hover table-striped">     
+      <tbody>
+        <form name="myForm" action="/update/{{task.id}}" onsubmit="return validateForm()" method="POST">
+            <tr>
+            <td style="width: 500px;">
+            <input type="text" name="content" id="content" value="{{task.content}}" style="width: 100%;">
+            </td>
+            <td> <!--  <input type="submit" class="btn btn-default" value="Add Task" style="width: 100%;">    -->
+                <span class="btn btn-primary btn-sm" style="width: 90%; float: right;">
+                <span class="glyphicon glyphicon-wrench"></span>
+                <input type="submit" class="btn btn-primary" value="Update Task" style="border:none;">
+                </span>                    
+            </td>
+            </tr>            
+        </form>
+      </tbody>
+    </table>    
+</div>    
+{% endblock %} 
